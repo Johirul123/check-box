@@ -1,0 +1,114 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #111;
+	height: 100vh;
+}
+ul{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	border: 3px solid #000;
+	border-radius: 35px;
+	padding: 20px 0px;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 240px;
+	background: linear-gradient(0deg,#000000,#0c0c0c);
+	transform: rotate(270deg);
+	box-shadow: 0px 0px 10px rgba(33, 56, 243, .5),
+				0px 0px 20px rgba(33, 56, 243, .5),
+				inset 0px 0px 30px rgba(33, 56, 243,.5),
+				0px 0px 10px rgba(33, 56, 243, .1);
+}
+ul:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, .05);
+	bottom: -50%;
+	pointer-events: none;
+	z-index: 100000;
+}
+ul li {
+	position: relative;
+	list-style: none;
+	text-align: center;
+	margin: 15px;
+
+}
+ul li label{
+	position: relative;
+}
+ul li label input[type="checkbox"]
+{
+	position: absolute;
+	opacity: 0; 
+	cursor: pointer;
+	
+}
+ul li label .icon{
+	width: 60px;
+	height: 60px;
+	background: #101010;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid #000;
+	border-radius: 50%;
+	transition: 0.8s;
+	transform: rotate(90deg);
+
+}
+ul li label .icon .far{
+	color: #222;
+	font-size: 30px;
+	transition: 0.8s;
+}
+ul li label .icon .fab{
+	color: #222;
+	font-size: 30px;
+	transition: 0.8s;
+
+}
+ul li label .icon .fas{
+	color: #222;
+	font-size: 30px;
+	transition: 0.8s;
+
+}
+ul li label input[type="checkbox"]:checked ~ .icon
+{
+	background: #000;
+	border: 3px solid #fff;
+	box-shadow: 0px 0px 10px rgba(33, 56, 243, .5),
+				0px 0px 20px rgba(33, 56, 243, .5),
+				0px 0px 30px rgba(33, 56, 243, .5),
+				0px 0px 10px rgba(33, 56, 243, .1);
+}
+ul li label input[type="checkbox"]:checked ~ .icon .far 
+{
+	color: #fff;
+	text-shadow: 0px 0px 10px rgba(33, 56, 243, 1),
+				0px 0px 10px rgba(33, 56, 243, 1);
+}
+ul li label input[type="checkbox"]:checked ~ .icon .fab
+{
+	color: #fff;
+	text-shadow: 0px 0px 10px rgba(33, 56, 243, 1),
+				0px 0px 10px rgba(33, 56, 243, 1);
+}
+ul li label input[type="checkbox"]:checked ~ .icon .fas 
+{
+	color: #ecef55;
+	text-shadow: 0px 0px 10px rgba(33, 56, 243, 1),
+				0px 0px 10px rgba(33, 56, 243, 1);
+}
